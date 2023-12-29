@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Work+Sans:wght@100&display=swap');
+
+:root {
+    --ff-sans: 'Poppins', sans-serif;
+    --fw-light: 200;
+    --fw-medium: 400;
+    --fw-bold: 600;
+    --clr-white: white;
+    --clr-less-white: rgb(211, 211, 211);
+    --font-size-title: 5rem;
+    --font-size-subtitle: 2.25rem;
+    --font-size-par: 1.5rem;
+    --img-teamwork: url(images/support.png);
+    --img-attention-to-detail: url(images/atd.png);
+    --img-project-management: url(images/project-management.png);
+    --img-creativity: url(images/creative.png);
+}
+
+
+header {
+    position: fixed;
+    height: calc(var(--font-size-subtitle) + 15px);
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    color: var(--clr-white);
+    font-size: var(--font-size-subtitle);
+    background: gray;
+}
+
+
+.progress-bar {
+    height: 1vb;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: rgb(255, 255, 109);
+    width: 100%;
+    scale: 0 1;
+    animation: progress-bar linear;
+    animation-timeline: scroll();
+}
+
+@keyframes progress-bar {
+    to {
+        scale: 1 1;
+    }
+}
+
+#profile-picture {
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+body {
+    background: rgb(40, 40, 40);
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    font-family: var(--ff-sans);
+}
+
+.heading1 {
+    font-size: var(--font-size-title);
+    color: var(--clr-white);
+    font-weight: var(--fw-bold);
+}
+
+.description {
+    font-size: var(--font-size-subtitle);
+    color: var(--clr-less-white);
+}
+
+.small-text {
+    font-size: var(--font-size-par);
+    color: var(--clr-less-white);
+}
+
+.section {
+    height: 100vb;
+    margin-bottom: 1rem;
+    padding: 2vb;
+    background: rgb(15, 15, 15);
+    width: 95%;
+}
+
+.about-me {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(2fr));
+}
+
+.skills {
+    height: 200vb;
+}
+
+.skill-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(200px, 2fr));
+    gap: 3vb;
+}
+
+.skill-card {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    padding: 2vb;
+    gap: 2em;
+    background: #161616;
+    transition: 100ms ease-in-out;
+}
+
+.skill-card:hover {
+    scale: 1.02;
+    box-shadow: 0 5px 5px rgba(0, 0, 0);
+}
+
+.skill-image {
+    transition: 100ms ease-in-out;
+}
+
+.skill-card:hover > .skill-image {
+    rotate: 20deg;
+}
+
+.top-border-blue {
+    border-top: 10px rgb(85, 184, 255) solid;
+}
+
+.top-border-yellow {
+    border-top: 10px rgb(241, 255, 85) solid;
+}
+
+.top-border-green {
+    border-top: 10px rgb(108, 255, 85) solid;
+}
+
+.top-border-red {
+    border-top: 10px rgb(255, 85, 85) solid;
+}
+
+.skill-image {
+    background: white;
+    height: 200px;
+    aspect-ratio: 1/1;
+    background-size: cover;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+}
+
+.img-teamwork {
+    background-image: var(--img-teamwork);
+    background-size: 80%;
+    background-position: center;
+}
+
+.img-attention-to-detail {
+    background-image: var(--img-attention-to-detail);
+    background-size: 70%;
+    background-position: center;
+}
+
+.img-project-management {
+    background-image: var(--img-project-management);
+    background-size: 70%;
+    background-position: center;
+}
+
+.img-creativity {
+    background-image: var(--img-creativity);
+    background-size: 70%;
+    background-position: center;
+}
+
+.work-card {
+    background: rgb(120, 120, 120);
+}
